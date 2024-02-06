@@ -1,20 +1,16 @@
 import { Button } from "antd";
 import { useState } from "react";
 
-
-const Addtodo = ({ toggleAdd ,store}) => {
-
-
+const Addtodo = ({ toggleAdd, store }) => {
   const [input, setInput] = useState({
     task: "",
     description: "",
   });
 
-  const handleClick =()=>{
-     store.addTodo({...input})
-     setInput({task:"",description:""})
-     
-  }
+  const handleClick = () => {
+    store.addTodo({ ...input });
+    setInput({ task: "", description: "" });
+  };
 
   return (
     <>
@@ -32,7 +28,9 @@ const Addtodo = ({ toggleAdd ,store}) => {
             className="text-xs block  focus:border-none outline-none  px-2 "
             style={{ width: "60vw" }}
             value={input.description}
-            onChange={(e)=> setInput({...input,description:e.target.value})}
+            onChange={(e) =>
+              setInput({ ...input, description: e.target.value })
+            }
           />
           <Button className="bg-white text-pink-600" onClick={handleClick}>
             Add task
@@ -46,4 +44,4 @@ const Addtodo = ({ toggleAdd ,store}) => {
   );
 };
 
-export default Addtodo
+export default Addtodo;
