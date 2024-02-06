@@ -12,7 +12,7 @@ const Sidebar = () => {
       {collapsed ? (
         <Menubar toggleCollapsed={toggleCollapsed} />
       ) : (
-        <Togglebutton toggleCollapsed={toggleCollapsed} />
+        <Togglebutton toggleCollapsed={toggleCollapsed} styles="mt-10 ml-10"/>
       )}
     </>
   );

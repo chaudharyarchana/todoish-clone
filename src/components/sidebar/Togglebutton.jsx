@@ -2,14 +2,14 @@ import { Button} from 'antd';
 import {UnorderedListOutlined} from '@ant-design/icons'
 
 const Togglebutton = ({
-    toggleCollapsed
-    
+    toggleCollapsed,
+    styles
 }) =>{
     return(
         <Button
         type="primary"
         onClick={toggleCollapsed}
-        className=' bg-pink-600 w-5'
+        className={ `bg-pink-600 w-5 ${styles}`}
         shape='circle'
         icon={<UnorderedListOutlined />}
       > 
